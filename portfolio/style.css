@@ -1,0 +1,12 @@
+
+
+
+    /*fazer colunas*/
+    .linhap{
+        display: flex;
+    }
+    
+    /*alinhar os textos*/
+    .textcent{
+        text-align: center;
+    }

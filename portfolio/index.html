@@ -20,21 +20,14 @@
 
     <!--end Bootstrap 4-->
 
+    <!--Arquivos-->
+    <link rel="stylesheet" href="style.css" type="style.css">
+    <!--End Arquivos-->
 
     <title>Portfolio</title>
 </head>
 
-<style>
-    /*fazer colunas*/
-    .linhap{
-        display: flex;
-    }
-    
-    /*alinhar os textos*/
-    .textcent{
-        text-align: center;
-    }
-</style>
+
 
 <body>
     <!--SOCIAL-->
@@ -57,9 +50,9 @@
         <!--navbar menu-->
         <div class="navbar-collapse justify-content-center collapse" id="collapsibleNavbar">
             <ul class="nav">
-                <li class="nav-item"><a class="nav-link navbar-brand" href="#">teste 1</a></li>
+                <li class="nav-item"><a class="nav-link navbar-brand" href="#experiências">Experiências</a></li>
+                <li class="nav-item"><a class="nav-link navbar-brand" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link navbar-brand" href="contact.html">Contato</a></li>
-                <li class="nav-item"><a class="nav-link navbar-brand" href="#">teste 3</a></li>
             </ul>
         </div>
         <!--end navbar menu-->
@@ -131,16 +124,16 @@
                 <h1>Descrição do personagem</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci accusamus eius minima esse ipsa suscipit quis quam fugiat cupiditate ad non exercitationem, laudantium sequi assumenda soluta asperiores illum nobis nulla.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, earum aperiam magnam, reprehenderit est nisi fuga inventore voluptatum dolorem iusto quo neque maxime sit reiciendis mollitia voluptates nemo cumque. Sed?</p>
-                <button type="button" class="btn btn-block btn-secondary">Secondary</button><br>
+                <button type="button" class="btn btn-block btn-secondary" data-toggle="modal" data-target="#modalExemplo" >Saber mais</button><br> <!--data-target chama o modal-->
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus sunt consequuntur aperiam corrupti ea consectetur officiis ad nobis numquam voluptatum repellat, assumenda, excepturi voluptates! At ducimus iste odio voluptas dolores!</p>
             </div>
         </div> 
         <!--end primeiro conteudo-->
         <!--segundo conteudo-->
-        <div class="linhap textcent" style="background-color: aquamarine;" id="accordion">
+        <div class="linhap textcent " id="experiências" style="background-color: aquamarine;" id="accordion">
             <div class="col"> <!--primeira coluna-->
                 <div class="card-header">
-                    <a data-toggle="collapse" href="#cardUm">Esperiencias</a>
+                    <a data-toggle="collapse" href="#cardUm">experiências</a>
                 </div>
                 <div class="collapse" id="cardUm">
                     <div class="card-bory">
@@ -151,7 +144,7 @@
             </div>
             <div class="col"> <!--segunda coluna-->
                 <div class="card-header">
-                    <a data-toggle="collapse" href="#cardDois">Esperiencias</a>
+                    <a data-toggle="collapse" href="#cardDois">experiências</a>
                 </div>
                 <div class="collapse show" id="cardDois">
                     <div class="card-bory">
@@ -162,7 +155,7 @@
             </div>
             <div class="col"> <!--terceira coluna-->
                 <div class="card-header">
-                   <a data-toggle="collapse" href="#cardTerceiro">Esperiencias</a>
+                   <a data-toggle="collapse" href="#cardTerceiro">experiências</a>
                 </div>
                 <div class="collapse" id="cardTerceiro">
                     <div class="card-bory">
@@ -179,7 +172,7 @@
                 <h1>alguma coisa aqui</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptas ratione magni ipsa modi totam veniam culpa animi dolore, dolorum delectus itaque dicta, iure fugit et maxime aspernatur explicabo debitis!</p>
             </div>
-            <div class="col">
+            <div class="col embed-responsive embed-responsive-4by3" > <!--video-->
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/xcJtL7QggTI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div> 
@@ -199,21 +192,48 @@
         <!--end newsletter-->
     </main>
     <!--END CONTEUDO-->
+    <!-- MODAL -->
+    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Mais informações</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptate deserunt iste repellendus doloribus consequuntur nihil aut, adipisci magni ea inventore quaerat tenetur enim eum sit voluptatum excepturi. Repudiandae, impedit.
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Não encontrei</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Sim encontrei</button>
+            </div>
+        </div>
+        </div>
+    </div>
+  <!-- END MODAL -->
+    <!--RODAPE-->
     <footer>
         <div class="linhap" style="background-color:black">
             <div style="color: blanchedalmond;" class="col">
-                <p>primeira coluna</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sed unde explicabo modi? Omnis, pariatur asperiores? Hic, harum odit animi dolore doloremque laboriosam vitae culpa, voluptatibus quod ipsum eveniet labore!</p>
+                <p>Contato</p>
+                <li>Telefone 1</li>
+                <li>Telefone 2</li>
             </div>
             <div class="col" style="color: blanchedalmond;">
-                <p>segunda coluna</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sed ex quibusdam ea deserunt alias, ut dolores laborum temporibus molestias autem voluptates blanditiis architecto dolore sunt nobis ab ducimus expedita.</p>
+                <p>Estrutura do site</p>
+                <a href="index.html" style="color: azure;"><li>Home</li></a>
+                <a href="contact.html"  style="color: azure;"><li>Contato</li></a>
             </div>
             <div class="col" style="color: blanchedalmond;">
-                <p>terceira coluna</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum a atque ipsum? In aliquam soluta ipsam iste nemo ex dolorem officiis ab, quaerat atque totam eum, voluptatum quos rem optio.</p>
+                <p>Localização</p>
+                <div>
+                <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26633.430672689818!2d-70.6735897064209!3d-33.444647043429526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a7b81bab67%3A0x7cf5cd1956dd49f7!2sTorre%20Entel!5e0!3m2!1spt-BR!2sbr!4v1590199515589!5m2!1spt-BR!2sbr" width="250" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>  
             </div>
         </div>
     </footer>
+    <!--END RODAPE-->
 </body>
 </html>
