@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
-</head>
-<body>
-    <h1>titulo do contato</h1>
-<p>teste 2</p>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title>Contato</title>
+  <style>
+    label {
+      display: inline-block;
+      width: 80px;
+    }
+    body{
+      padding-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>titulo do contato</h1>
+  <p>teste 2</p>
+
+  <!-- modal box -->
+  <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <p>Nome e email enviados com sucesso !!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- form -->
+  <form id="myForm" onsubmit="openModal()">
+    <label>Nome:</label>
+    <input type="text" name="name"><br><br>
+    <label>O email:</label>
+    <input type="email" name="email"><br><br>
+    <label>Senha:</label>
+    <input type="password" name="password"><br><br>
+    <button type="submit" class="btn btn-dark">Enviar</button>
+  </form>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script>
+    $('#myForm').on('submit', function(e) {
+      $('#myModal').modal('show');
+      e.preventDefault();
+    });
+  </script>
 </body>
+
 </html>
